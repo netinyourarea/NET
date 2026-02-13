@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Net in your area for independent assistance with your internet, cable, and connectivity issues. Available 24/7.">
+    <title>Contact Us - Net in your area</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Call Button -->
+    <button class="floating-call-btn" id="floatingCallBtn" aria-label="Call Support">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        <span>CALL NOW</span>
+    </button>
+
+    <!-- Call Modal -->
+    <div class="modal-overlay" id="callModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            <div class="modal-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+            </div>
+            <h2>Get Instant Support</h2>
+            <p class="modal-subtitle">Speak with a real assistance agent now</p>
+            <a href="tel:+18888739002" class="modal-cta-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                Call Now (888) 873-9002
+            </a>
+            <p class="modal-disclaimer">Independent service assistance • No brand affiliation</p>
+        </div>
+    </div>
+
+    <!-- Auto Popup (appears after 5 seconds) -->
+    <div class="auto-popup-overlay" id="autoPopup">
+        <div class="auto-popup-content">
+            <button class="auto-popup-close" id="autoPopupClose">&times;</button>
+            <div class="auto-popup-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+            </div>
+            <h2 class="auto-popup-headline">Internet or Cable Not Working?</h2>
+            <p class="auto-popup-subtext">Get instant help for slow internet, outages, setup issues, or cable problems.</p>
+            <div class="auto-popup-phone">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                (888) 873-9002
+            </div>
+            <a href="tel:+18888739002" class="auto-popup-cta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                Call Support Now
+            </a>
+            <p class="auto-popup-trust">Quick assistance • No forms • Talk to a real agent</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar-new">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo-new">
+                    <img src="logo.svg" alt="Net in your area" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-content" id="navMenu">
+                    <ul class="nav-menu-new">
+                        <li><a href="index.html" class="nav-link-new">Home</a></li>
+                        <li><a href="about.html" class="nav-link-new">About</a></li>
+                        <li><a href="faq.html" class="nav-link-new">FAQ</a></li>
+                        <li><a href="contact.html" class="nav-link-new active">Contact</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <span class="nav-phone-text">24/7 Support</span>
+                        <a href="tel:+18888739002" class="nav-cta-new">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>Call Now (888) 873-9002</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contact <span class="gradient-text">Net in your area</span></h1>
+            <p>Get help with your internet or cable issue today</p>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="content-section">
+        <div class="container">
+            <div class="help-grid" style="margin-bottom: 4rem;">
+                <div class="help-card scroll-reveal">
+                    <div class="help-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Get immediate assistance by phone</p>
+                    <a href="tel:+18888739002" style="color: var(--netflix-red); font-weight: 700; font-size: 1.3rem; display: block; margin-top: 1rem;">(888) 873-9002</a>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Available 24/7</p>
+                </div>
+                <div class="help-card scroll-reveal">
+                    <div class="help-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>Send us a detailed message</p>
+                    <a href="mailto:support@connectaid.com" style="color: var(--netflix-red); font-weight: 700; display: block; margin-top: 1rem;">support@connectaid.com</a>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Response within 24 hours</p>
+                </div>
+                <div class="help-card scroll-reveal">
+                    <div class="help-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Contact Form</h3>
+                    <p>Fill out the form below</p>
+                    <a href="#contact-form" style="color: var(--netflix-red); font-weight: 700; display: block; margin-top: 1rem;">Send Message</a>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Quick and secure</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="content-wrapper" id="contact-form">
+                <div class="content-card scroll-reveal">
+                    <h2 style="text-align: center; margin-bottom: 0.5rem;">Send Us a Message</h2>
+                    <p style="text-align: center; margin-bottom: 2rem;">Fill out the form below and we'll get back to you as soon as possible.</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="issue-type">Issue Type *</label>
+                            <select id="issue-type" name="issue-type" required>
+                                <option value="">Select an issue type</option>
+                                <option value="internet-outage">Internet Outage</option>
+                                <option value="slow-speed">Slow Internet Speed</option>
+                                <option value="cable-issue">Cable/TV Problem</option>
+                                <option value="wifi-problem">WiFi Connectivity</option>
+                                <option value="equipment-setup">Equipment Setup</option>
+                                <option value="billing-question">Billing Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="provider">Your Current Provider (Optional)</label>
+                            <input type="text" id="provider" name="provider" placeholder="e.g., Comcast, Verizon, etc.">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Describe Your Issue *</label>
+                            <textarea id="message" name="message" required placeholder="Please describe your connectivity issue in detail..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-submit">Send Message</button>
+                        
+                        <p style="text-align: center; font-size: 0.85rem; color: var(--muted-grey); margin-top: 1.5rem;">
+                            By submitting this form, you acknowledge that ConnectAid is an independent third-party service assistance provider, not affiliated with any ISP or telecom company.
+                        </p>
+                    </form>
+                </div>
+                
+                <div class="content-card scroll-reveal">
+                    <h2>Important Notice</h2>
+                    <div style="background: rgba(229, 9, 20, 0.1); border: 1px solid rgba(229, 9, 20, 0.3); border-radius: 8px; padding: 1.5rem;">
+                        <p><strong>ConnectAid is an independent third-party service assistance provider.</strong> We are not affiliated with, authorized by, or endorsed by any internet, cable, or telecom service provider.</p>
+                        <p style="margin-bottom: 0;">When you contact us, we'll provide guidance and troubleshooting assistance, but we cannot make changes to your provider account, billing, or service plans.</p>
+                    </div>
+                </div>
+                
+                <div class="content-card scroll-reveal">
+                    <h2>What Happens After You Contact Us?</h2>
+                    <ol>
+                        <li><strong>We Review Your Message:</strong> Our team reads your submission and identifies the type of issue you're experiencing.</li>
+                        <li><strong>Initial Assessment:</strong> We gather the information needed to provide effective guidance.</li>
+                        <li><strong>Response:</strong> You'll receive a response via your preferred contact method (usually within 24 hours for form submissions).</li>
+                        <li><strong>Assistance:</strong> We'll provide step-by-step troubleshooting guidance or recommendations based on your specific situation.</li>
+                        <li><strong>Follow-Up:</strong> If needed, we'll continue to assist until your issue is resolved or you've been properly directed to the right resources.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-new">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <img src="logo.svg" alt="Net in your area">
+                        </a>
+                        <p class="footer-tagline">Independent assistance for all your connectivity needs</p>
+                        <a href="tel:+18888739002" class="footer-cta-phone">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>(888) 873-9002</span>
+                        </a>
+                    </div>
+                    <div class="footer-links-section">
+                        <div class="footer-col-new">
+                            <h4 class="footer-heading-new">Navigation</h4>
+                            <ul class="footer-links-new">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col-new">
+                            <h4 class="footer-heading-new">Legal</h4>
+                            <ul class="footer-links-new">
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                <li><a href="terms.html">Terms & Conditions</a></li>
+                                <li><a href="refund.html">Refund Policy</a></li>
+                                <li><a href="disclaimer.html">Disclaimer</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col-new">
+                            <h4 class="footer-heading-new">Contact Info</h4>
+                            <ul class="footer-links-new">
+                                <li><a href="mailto:info@netinyourarea.com">info@netinyourarea.com</a></li>
+                                <li><a href="tel:+18888739002">(888) 873-9002</a></li>
+                                <li>24/7 Support Available</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-new">
+            <div class="container">
+                <div class="footer-disclaimer">
+                    <p><strong>Net in your area is an independent third-party service assistance provider.</strong> We are not affiliated with, authorized by, or endorsed by any internet, cable, or telecom service provider. All trademarks, logos, and brand names are the property of their respective owners.</p>
+                </div>
+                <div class="footer-copyright-new">
+                    <p>&copy; 2026 Net in your area LLC. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Bar -->
+    <div class="mobile-bottom-bar">
+        <a href="tel:+18888739002" class="mobile-bottom-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>CALL FOR HELP NOW</span>
+        </a>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

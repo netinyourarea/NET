@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Internet down? WiFi not working? Get immediate help for internet outages, connection problems, WiFi troubleshooting, and connectivity issues in your area. 24/7 assistance available.">
+    <title>Internet Down? WiFi Not Working? - Get Help Now | Net in your area</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Call Button -->
+    <button class="floating-call-btn" id="floatingCallBtn" aria-label="Call for Independent Guidance">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        <span>CALL NOW (888) 873-9002</span>
+    </button>
+
+    <!-- Call Modal -->
+    <div class="modal-overlay" id="callModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            <div class="modal-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+            </div>
+            <h2>Get Independent Guidance</h2>
+            <p class="modal-subtitle">Speak with a third-party internet advisor</p>
+            <a href="tel:+18888739002" class="modal-cta-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                Call Now (888) 873-9002
+            </a>
+            <p class="modal-disclaimer">Net in your area is an independent third-party service assistance provider. We are not affiliated with, authorized by, or endorsed by any internet, cable, or telecom service provider.</p>
+        </div>
+    </div>
+
+    <!-- Auto Popup (appears after 5 seconds) -->
+    <div class="auto-popup-overlay" id="autoPopup">
+        <div class="auto-popup-content">
+            <button class="auto-popup-close" id="autoPopupClose">&times;</button>
+            <div class="auto-popup-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+            </div>
+            <h2 class="auto-popup-headline">Internet or Cable Not Working?</h2>
+            <p class="auto-popup-subtext">Get instant help for slow internet, outages, setup issues, or cable problems.</p>
+            <div class="auto-popup-phone">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                (888) 873-9002
+            </div>
+            <a href="tel:+18888739002" class="auto-popup-cta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                Call Support Now
+            </a>
+            <p class="auto-popup-trust">Quick assistance • No forms • Talk to a real agent</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar-new">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo-new">
+                    <img src="logo.svg" alt="Net in your area" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-content">
+                    <ul class="nav-menu-new" id="navMenu">
+                        <li><a href="index.html" class="nav-link-new active">Home</a></li>
+                        <li><a href="about.html" class="nav-link-new">About</a></li>
+                        <li><a href="faq.html" class="nav-link-new">FAQ</a></li>
+                        <li><a href="contact.html" class="nav-link-new">Contact</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <span class="nav-phone-text">24/7 Support</span>
+                        <a href="tel:+18888739002" class="nav-cta-new">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>(888) 873-9002</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video class="hero-bg-video" autoplay muted loop playsinline>
+            <source src="video4.mp4" type="video/mp4">
+        </video>
+        <div class="hero-glow"></div>
+        <div class="container hero-container">
+            <div class="hero-content-wrapper fade-in">
+                <div class="hero-main">
+                    <h1 class="hero-title">
+                        Internet Down? WiFi Not Working? <br>
+                        <span class="gradient-text">Get Help Now</span>
+                    </h1>
+                    <p class="hero-subtitle">Having internet problems? WiFi keeps dropping? Connection issues? Get immediate guidance for internet outages, troubleshooting, and connectivity issues in your area.</p>
+                    
+                    <div class="hero-cta-group">
+                        <a href="tel:+18888739002" class="cta-btn primary-cta">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>Call Now (888) 873-9002</span>
+                        </a>
+                        <a href="#what-we-do" class="cta-btn secondary-cta">
+                            <span>How We Help</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-features">
+                    <div class="hero-feature-card">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3>24/7 Available</h3>
+                            <p>Informational support anytime</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-feature-card">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Independent</h3>
+                            <p>No brand affiliation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-feature-card">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Clear Guidance</h3>
+                            <p>Easy to understand help</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="section what-we-do-section" id="what-we-do">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What We <span class="gradient-text">Do</span></h2>
+                <p class="section-subtitle">Our role is limited to independent guidance and assistance only</p>
+            </div>
+            <div class="what-we-do-grid">
+                <div class="what-we-do-card scroll-reveal">
+                    <div class="what-we-do-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 16v-4"></path>
+                            <path d="M12 8h.01"></path>
+                        </svg>
+                    </div>
+                    <h3>Understand Service Options</h3>
+                    <p>Get clear explanations about internet and broadband service options available to you</p>
+                </div>
+                <div class="what-we-do-card scroll-reveal">
+                    <div class="what-we-do-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                    </div>
+                    <h3>Practical Connectivity Guidance</h3>
+                    <p>Receive practical guidance on common connectivity issues and topics</p>
+                </div>
+                <div class="what-we-do-card scroll-reveal">
+                    <div class="what-we-do-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Navigate Provider Processes</h3>
+                    <p>Learn how to effectively navigate service provider processes and procedures</p>
+                </div>
+                <div class="what-we-do-card scroll-reveal">
+                    <div class="what-we-do-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <polyline points="17 2 12 7 7 2"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Cable TV Support Information</h3>
+                    <p>Receive general informational support related to cable TV service topics</p>
+                </div>
+            </div>
+            <div class="what-we-do-notice scroll-reveal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+                <p>Our role is limited to independent guidance and assistance only.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Help With -->
+    <section class="section help-section">
+        <div class="section-bg-image help-bg"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Types of <span class="gradient-text">Guidance We Offer</span></h2>
+                <p class="section-subtitle">General informational support for connectivity-related topics</p>
+            </div>
+            <div class="help-grid">
+                <div class="help-card scroll-reveal">
+                    <div class="help-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                    </div>
+                    <h3>Connectivity Information</h3>
+                    <p>General information about internet outages and service interruptions</p>
+                </div>
+                <div class="help-card scroll-reveal">
+                    <div class="help-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="8 12 12 16 16 12"></polyline>
+                            <line x1="12" y1="8" x2="12" y2="16"></line>
+                        </svg>
+                    </div>
+                    <h3>Performance Guidance</h3>
+                    <p>Informational support regarding internet speed topics</p>
+                </div>
+                <div class="help-card scroll-reveal">
+                    <div class="help-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <polyline points="17 2 12 7 7 2"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Cable TV Information</h3>
+                    <p>General guidance related to cable and TV service topics</p>
+                </div>
+                <div class="help-card scroll-reveal">
+                    <div class="help-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3>Equipment Information</h3>
+                    <p>General guidance about router and modem setup processes</p>
+                </div>
+                <div class="help-card scroll-reveal">
+                    <div class="help-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                            <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                            <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                        </svg>
+                    </div>
+                    <h3>WiFi Guidance</h3>
+                    <p>Informational support for wireless network topics</p>
+                </div>
+                <div class="help-card scroll-reveal">
+                    <div class="help-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Service Information</h3>
+                    <p>Help navigating service provider processes and understanding options</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section timeline-section" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How Our <span class="gradient-text">Assistance Works</span></h2>
+                <p class="section-subtitle">Fast, simple help when your internet is down or not connecting</p>
+            </div>
+            <div class="process-grid-new">
+                <div class="process-step scroll-reveal">
+                    <div class="step-badge">Step 1</div>
+                    <div class="step-icon-wrap">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <h3>Contact Our Team</h3>
+                    <p>Call us immediately when experiencing internet outages, WiFi problems, or connectivity issues. We're available 24/7.</p>
+                </div>
+
+                <div class="process-step scroll-reveal">
+                    <div class="step-badge">Step 2</div>
+                    <div class="step-icon-wrap">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 11l3 3L22 4"></path>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                        </svg>
+                    </div>
+                    <h3>Describe Your Issue</h3>
+                    <p>Tell us about your internet trouble - whether it's down completely, WiFi keeps dropping, slow speeds, or connection problems.</p>
+                </div>
+
+                <div class="process-step scroll-reveal">
+                    <div class="step-badge">Step 3</div>
+                    <div class="step-icon-wrap">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                    </div>
+                    <h3>Get Instant Guidance</h3>
+                    <p>Receive immediate troubleshooting steps, outage information for your area, and expert guidance to resolve your connectivity issues.</p>
+                </div>
+
+                <div class="process-step scroll-reveal">
+                    <div class="step-badge">Step 4</div>
+                    <div class="step-icon-wrap">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                            <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                            <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                        </svg>
+                    </div>
+                    <h3>Get Back Online</h3>
+                    <p>Follow our expert recommendations to restore your internet connection or get directed to the right provider support resources.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do NOT Do -->
+    <section class="section not-section">
+        <div class="container">
+            <div class="not-content scroll-reveal">
+                <div class="not-header">
+                    <div class="not-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                        </svg>
+                    </div>
+                    <h2>What We Do <span class="gradient-text">NOT</span> Do</h2>
+                    <p class="not-subtitle">To avoid confusion, please note the following limitations:</p>
+                </div>
+                <div class="not-grid">
+                    <div class="not-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                        <span>We are NOT an Internet Service Provider (ISP)</span>
+                    </div>
+                    <div class="not-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                        <span>We do NOT provide official customer support for any brand</span>
+                    </div>
+                    <div class="not-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                        <span>We are NOT affiliated, authorized, or endorsed by any telecom or cable company</span>
+                    </div>
+                    <div class="not-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                        <span>We do NOT sell internet or cable subscriptions</span>
+                    </div>
+                    <div class="not-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                        <span>We do NOT provide guaranteed technical fixes</span>
+                    </div>
+                    <div class="not-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                        <span>All mentions of providers, if any, are strictly for informational purposes only</span>
+                    </div>
+                </div>
+                <div style="background: rgba(229, 9, 20, 0.1); border: 2px solid var(--netflix-red); border-radius: 12px; padding: 2rem; margin-top: 3rem; text-align: center;">
+                    <p style="font-size: 1.2rem; font-weight: 700; color: var(--soft-white); margin-bottom: 1rem;">⚠️ IMPORTANT NOTICE</p>
+                    <p style="font-size: 1.05rem; line-height: 1.8; color: var(--soft-white); margin: 0;">Net in your area is an independent third-party service assistance provider. We are not affiliated with, authorized by, or endorsed by any internet, broadband, or cable TV service provider. Brand names, if mentioned, are used strictly for informational purposes only.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Independent Support -->
+    <section class="section why-section">
+        <div class="container">
+            <div class="why-content">
+                <div class="why-text scroll-reveal">
+                    <h2>Why Independent <span class="gradient-text">Support Matters</span></h2>
+                    <p>As an independent third-party service, we provide unbiased assistance focused solely on helping you resolve your connectivity issues.</p>
+                    <ul class="why-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span><strong>No Sales Pressure:</strong> We don't push upgrades or new plans</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span><strong>Unbiased Guidance:</strong> Our advice is based on your needs, not commissions</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span><strong>Quick Response:</strong> Skip provider hold times and automated systems</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span><strong>Clear Communication:</strong> We explain issues in simple, straightforward terms</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="why-visual scroll-reveal">
+                    <div class="stat-card">
+                        <div class="stat-number">5K+</div>
+                        <div class="stat-label">Issues Resolved</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support Available</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Independent</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                <p class="section-subtitle">Quick answers to common questions</p>
+            </div>
+            <div class="faq-wrapper">
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What exactly does Net in your area do?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Net in your area is an independent third-party service assistance provider. We help guide you through internet, cable, and connectivity issues by providing expert troubleshooting advice, explanations, and information about how to resolve your problems.</p>
+                    </div>
+                </div>
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Are you affiliated with my internet or cable provider?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. We are completely independent and not affiliated with, authorized by, or endorsed by any internet, cable, or telecom service provider. We provide unbiased assistance.</p>
+                    </div>
+                </div>
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How much does your service cost?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our service fees vary based on the type and complexity of assistance needed. All costs are clearly explained before any service is provided. Contact us for specific pricing information.</p>
+                    </div>
+                </div>
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can you fix my internet connection remotely?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We provide guidance and troubleshooting assistance, but we cannot access your devices or network remotely. We walk you through steps to identify and resolve issues, or help you connect with your provider's technical support when needed.</p>
+                    </div>
+                </div>
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Do I need to cancel my current service?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. We do not sell internet or cable services and we are not asking you to change providers. We help you resolve issues with your existing service.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-cta">
+                <p>Still have questions?</p>
+                <a href="faq.html" class="cta-btn secondary-cta">View All FAQs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="section contact-info-section">
+        <div class="section-bg-image contact-bg"></div>
+        <div class="container">
+            <div class="content-card scroll-reveal" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2>Contact Information</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">Net in your area - Independent Third-Party Service Assistance Provider</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                    <div>
+                        <h3 style="color: var(--netflix-red); margin-bottom: 0.5rem;">Phone</h3>
+                        <a href="tel:+18888739002" style="color: var(--soft-white); font-size: 1.3rem; font-weight: 700;">(888) 873-9002</a>
+                        <p style="font-size: 0.9rem; color: var(--muted-grey); margin-top: 0.5rem;">24/7 Informational Support</p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--netflix-red); margin-bottom: 0.5rem;">Email</h3>
+                        <a href="mailto:info@netinyourarea.com" style="color: var(--soft-white); font-size: 1.1rem;">info@netinyourarea.com</a>
+                        <p style="font-size: 0.9rem; color: var(--muted-grey); margin-top: 0.5rem;">General Inquiries</p>
+                    </div>
+                </div>
+                <div style="background: rgba(229, 9, 20, 0.1); border: 1px solid rgba(229, 9, 20, 0.3); border-radius: 8px; padding: 1.5rem; margin-top: 2rem;">
+                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.7;"><strong>Legal Business Name:</strong> Net in your area LLC<br><strong>Service Type:</strong> Independent Third-Party Assistance Provider</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="section final-cta-section">
+        <div class="container">
+            <div class="final-cta-content scroll-reveal">
+                <h2>Need <span class="gradient-text">Independent Guidance?</span></h2>
+                <p>Get general informational support related to internet and cable service topics.</p>
+                <a href="tel:+18888739002" class="cta-btn primary-cta mega-cta">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <span>Call Now (888) 873-9002</span>
+                </a>
+                <p class="final-disclaimer">Not an ISP. No brand affiliation.<br>Independent third-party service assistance provider.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-new">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <img src="logo.svg" alt="Net in your area" class="footer-logo">
+                        <p class="footer-tagline">Your trusted internet assistance partner</p>
+                        <a href="tel:+18888739002" class="footer-cta-phone">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            (888) 873-9002
+                        </a>
+                    </div>
+                    <div class="footer-links-section">
+                        <div class="footer-col-new">
+                            <h4 class="footer-heading-new">Navigation</h4>
+                            <ul class="footer-list">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col-new">
+                            <h4 class="footer-heading-new">Legal</h4>
+                            <ul class="footer-list">
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                <li><a href="terms.html">Terms & Conditions</a></li>
+                                <li><a href="refund.html">Refund Policy</a></li>
+                                <li><a href="disclaimer.html">Disclaimer</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col-new">
+                            <h4 class="footer-heading-new">Contact Info</h4>
+                            <ul class="footer-list">
+                                <li><strong>Net in your area LLC</strong></li>
+                                <li>Phone: (888) 873-9002</li>
+                                <li>Email: info@netinyourarea.com</li>
+                                <li>Available 24/7</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-new">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="footer-disclaimer"><strong>DISCLAIMER:</strong> Net in your area is an independent third-party service assistance provider. We are not affiliated with, authorized by, or endorsed by any internet, broadband, or cable TV service provider.</p>
+                    <p class="footer-copyright-new">&copy; 2026 Net in your area LLC. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Bar -->
+    <div class="mobile-bottom-bar">
+        <a href="tel:+18888739002" class="mobile-bottom-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>CALL NOW (888) 873-9002</span>
+        </a>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

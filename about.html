@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Net in your area - an independent third-party service assistance provider for internet and cable issues.">
+    <title>About Us - Net in your area</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Call Button -->
+    <button class="floating-call-btn" id="floatingCallBtn" aria-label="Call Support">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        <span>CALL NOW</span>
+    </button>
+
+    <!-- Call Modal -->
+    <div class="modal-overlay" id="callModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            <div class="modal-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+            </div>
+            <h2>Get Instant Support</h2>
+            <p class="modal-subtitle">Speak with a real assistance agent now</p>
+            <a href="tel:+18888739002" class="modal-cta-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                Call Now (888) 873-9002
+            </a>
+            <p class="modal-disclaimer">Independent service assistance • No brand affiliation</p>
+        </div>
+    </div>
+
+    <!-- Auto Popup (appears after 5 seconds) -->
+    <div class="auto-popup-overlay" id="autoPopup">
+        <div class="auto-popup-content">
+            <button class="auto-popup-close" id="autoPopupClose">&times;</button>
+            <div class="auto-popup-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+            </div>
+            <h2 class="auto-popup-headline">Internet or Cable Not Working?</h2>
+            <p class="auto-popup-subtext">Get instant help for slow internet, outages, setup issues, or cable problems.</p>
+            <div class="auto-popup-phone">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                (888) 873-9002
+            </div>
+            <a href="tel:+18888739002" class="auto-popup-cta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                Call Support Now
+            </a>
+            <p class="auto-popup-trust">Quick assistance • No forms • Talk to a real agent</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar-new">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo-new">
+                    <img src="logo.svg" alt="Net in your area" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-content">
+                    <ul class="nav-menu-new" id="navMenu">
+                        <li><a href="index.html" class="nav-link-new">Home</a></li>
+                        <li><a href="about.html" class="nav-link-new active">About</a></li>
+                        <li><a href="faq.html" class="nav-link-new">FAQ</a></li>
+                        <li><a href="contact.html" class="nav-link-new">Contact</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <span class="nav-phone-text">24/7 Support</span>
+                        <a href="tel:+18888739002" class="nav-cta-new">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>(888) 873-9002</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>About <span class="gradient-text">Net in your area</span></h1>
+            <p>Your independent partner for internet and cable assistance</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="content-card scroll-reveal">
+                    <h2>Who We Are</h2>
+                    <p>ConnectAid is an independent third-party service assistance provider dedicated to helping individuals and families resolve their internet, cable, and connectivity challenges. We understand how frustrating it can be when your internet goes down, your cable stops working, or you can't figure out why your connection is so slow.</p>
+                    <p>Founded with the mission to provide clear, unbiased guidance without the sales pressure often associated with telecom companies, we've built our reputation on transparency, accessibility, and genuine customer care.</p>
+                </div>
+
+                <div class="content-card scroll-reveal">
+                    <h2>What Makes Us Different</h2>
+                    <h3>Complete Independence</h3>
+                    <p>We are <strong>NOT</strong> affiliated with, authorized by, or endorsed by any internet service provider (ISP), cable company, or telecommunications corporation. This independence means our guidance is based solely on what's best for you—not on commissions, quotas, or corporate partnerships.</p>
+                    
+                    <h3>No Sales Pressure</h3>
+                    <p>Unlike provider customer service lines, we won't try to upsell you to a more expensive plan, convince you to bundle services you don't need, or push promotional offers. Our focus is on helping you understand and resolve your current issue.</p>
+                    
+                    <h3>Clear Communication</h3>
+                    <p>We explain technical issues in plain English without confusing jargon. Whether you're tech-savvy or just need basic help, we adapt our communication to ensure you understand what's happening and what steps to take.</p>
+                    
+                    <h3>Faster Response Times</h3>
+                    <p>Tired of automated phone trees and long hold times? Our assistance model is designed to get you help quickly, without the lengthy wait times commonly experienced with major providers.</p>
+                </div>
+
+                <div class="content-card scroll-reveal">
+                    <h2>Our Mission</h2>
+                    <p>To empower people with the knowledge and support they need to resolve connectivity issues efficiently, transparently, and without unnecessary complexity or sales tactics.</p>
+                    <p>We believe everyone deserves reliable internet and cable service, and when problems arise, they should have access to straightforward, honest assistance that puts their needs first.</p>
+                </div>
+
+                <div class="content-card scroll-reveal">
+                    <h2>What We Do</h2>
+                    <ul>
+                        <li><strong>Troubleshooting Guidance:</strong> Step-by-step assistance to identify and resolve common connectivity issues</li>
+                        <li><strong>Technical Explanations:</strong> Clear explanations of what's causing your internet or cable problems</li>
+                        <li><strong>Setup Support:</strong> Help with configuring routers, modems, and other equipment</li>
+                        <li><strong>Provider Navigation:</strong> Guidance on how to effectively communicate with your ISP or cable company</li>
+                        <li><strong>Service Optimization:</strong> Tips to improve your connection speed and reliability</li>
+                        <li><strong>Billing Clarity:</strong> Help understanding charges and service details</li>
+                    </ul>
+                </div>
+
+                <div class="content-card scroll-reveal">
+                    <h2>What We Do NOT Do</h2>
+                    <ul>
+                        <li>We do NOT sell internet or cable plans</li>
+                        <li>We do NOT represent any specific ISP or telecom provider</li>
+                        <li>We do NOT have direct access to your provider's systems or account</li>
+                        <li>We do NOT perform on-site technical services or installations</li>
+                        <li>We do NOT make changes to your billing or service plans</li>
+                        <li>We do NOT claim to be authorized agents of any provider</li>
+                    </ul>
+                </div>
+
+                <div class="content-card scroll-reveal">
+                    <h2>Our Commitment to Transparency</h2>
+                    <p>Transparency is at the core of everything we do. We clearly communicate:</p>
+                    <ul>
+                        <li>Our independent status and lack of provider affiliations</li>
+                        <li>The scope and limitations of our service</li>
+                        <li>All fees and costs before any service is provided</li>
+                        <li>What we can and cannot do to assist you</li>
+                        <li>When you should contact your provider directly instead</li>
+                    </ul>
+                    <p>This website, all our communications, and our service delivery are designed with complete honesty about who we are and what role we play in your connectivity journey.</p>
+                </div>
+
+                <div class="content-card scroll-reveal">
+                    <h2>Important Disclaimer</h2>
+                    <div style="background: rgba(229, 9, 20, 0.1); border: 1px solid rgba(229, 9, 20, 0.3); border-radius: 8px; padding: 1.5rem; margin-top: 1rem;">
+                        <p style="margin: 0;"><strong>ConnectAid is an independent third-party service assistance provider.</strong> We are not affiliated with, authorized by, or endorsed by any internet, cable, or telecom service provider. All trademarks, logos, and brand names mentioned are the property of their respective owners. We provide guidance and support services but do not have the authority to make changes to your account, billing, or service with any provider.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section final-cta-section">
+        <div class="container">
+            <div class="final-cta-content scroll-reveal">
+                <h2>Ready to Get <span class="gradient-text">Help?</span></h2>
+                <p>Contact us today for independent, unbiased assistance with your connectivity issues.</p>
+                <a href="tel:+18888739002" class="cta-btn primary-cta mega-cta">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <span>CALL NOW (888) 873-9002</span>
+                </a>
+                <p class="final-disclaimer">Independent service assistance • Not affiliated with any ISP or telecom provider</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-new">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <img src="logo.svg" alt="Net in your area">
+                        </a>
+                        <p class="footer-tagline">Independent assistance for all your connectivity needs</p>
+                        <a href="tel:+18888739002" class="footer-cta-phone">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>(888) 873-9002</span>
+                        </a>
+                    </div>
+                    <div class="footer-links-section">
+                        <div class="footer-col-new">
+                            <h4 class="footer-heading-new">Navigation</h4>
+                            <ul class="footer-links-new">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col-new">
+                            <h4 class="footer-heading-new">Legal</h4>
+                            <ul class="footer-links-new">
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                <li><a href="terms.html">Terms & Conditions</a></li>
+                                <li><a href="refund.html">Refund Policy</a></li>
+                                <li><a href="disclaimer.html">Disclaimer</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col-new">
+                            <h4 class="footer-heading-new">Contact Info</h4>
+                            <ul class="footer-links-new">
+                                <li><a href="mailto:info@netinyourarea.com">info@netinyourarea.com</a></li>
+                                <li><a href="tel:+18888739002">(888) 873-9002</a></li>
+                                <li>24/7 Support Available</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-new">
+            <div class="container">
+                <div class="footer-disclaimer">
+                    <p><strong>Net in your area is an independent third-party service assistance provider.</strong> We are not affiliated with, authorized by, or endorsed by any internet, cable, or telecom service provider. All trademarks, logos, and brand names are the property of their respective owners.</p>
+                </div>
+                <div class="footer-copyright-new">
+                    <p>&copy; 2026 Net in your area LLC. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Bar -->
+    <div class="mobile-bottom-bar">
+        <a href="tel:+18888739002" class="mobile-bottom-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>CALL FOR HELP NOW</span>
+        </a>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Network signal icon -->
+  <circle cx="20" cy="30" r="18" fill="#E50914" opacity="0.2"/>
+  <path d="M20 12 L20 30 M20 30 L32 24 M20 30 L32 36 M20 30 L8 24 M20 30 L8 36" stroke="#E50914" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="20" cy="30" r="3" fill="#E50914"/>
+  <circle cx="32" cy="24" r="2.5" fill="#FF3344"/>
+  <circle cx="32" cy="36" r="2.5" fill="#FF3344"/>
+  <circle cx="8" cy="24" r="2.5" fill="#FF3344"/>
+  <circle cx="8" cy="36" r="2.5" fill="#FF3344"/>
+  
+  <!-- Text -->
+  <text x="45" y="28" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">
+    Net in your area
+  </text>
+  <text x="45" y="42" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#999999">
+    INTERNET ASSISTANCE
+  </text>
+</svg>
